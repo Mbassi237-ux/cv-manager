@@ -1,5 +1,5 @@
-import { Member } from "../models/Member";
-import { IndexedDBService } from "./IndexedDBService";
+import { Member } from "../models/Member.js";
+import { IndexedDBService } from "./IndexedDBService.js";
 
 export class MemberService {
   private db   = new IndexedDBService();

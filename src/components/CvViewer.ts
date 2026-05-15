@@ -27,15 +27,16 @@ export class CvViewer {
           <div class="cv-modal-name">${member.lastName} ${member.firstName}</div>
           <div class="cv-modal-profession">${member.profession || "—"}</div>
           <div class="cv-modal-email">${member.email}</div>
+          <div class="cv-modal-phone">📞 ${member.phone || "—"}</div>
         </div>
       </div>
 
       <div class="cv-modal-body">
-        ${this.section("Profil",                 member.bio)}
-        ${this.section("Diplômes",               member.diplomas)}
-        ${this.section("Expérience",             member.career)}
-        ${this.section("Compétences",            member.skills)}
-        ${this.section("Langues",                member.languages)}
+        ${this.section("Profil",       member.bio)}
+        ${this.section("Diplômes",     member.diplomas)}
+        ${this.section("Expérience",   member.career)}
+        ${this.section("Compétences",  member.skills)}
+        ${this.section("Langues",      member.languages)}
         ${member.video ? this.mediaSection("Vidéo de présentation", "video", member.video) : ""}
         ${member.audio ? this.mediaSection("Audio de présentation", "audio", member.audio) : ""}
       </div>
@@ -45,7 +46,6 @@ export class CvViewer {
     document.body.appendChild(overlay);
     this.overlay = overlay;
 
-    // Close handlers
     modal.querySelector(".cv-modal-close")!.addEventListener("click", () => this.close());
     overlay.addEventListener("click", (e) => { if (e.target === overlay) this.close(); });
     document.addEventListener("keydown", this.onKey);

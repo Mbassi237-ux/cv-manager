@@ -1,9 +1,10 @@
-import { Header }       from "./components/Header";
-import { CvEditor }     from "./components/CvEditor";
-import { MemberList }   from "./components/MemberList";
-import { CvViewer }     from "./components/CvViewer";
-import { FileHandler }  from "./utils/FileHandler";
-import { MemberService } from "./services/MemberService";
+
+import { Header }       from "./components/Header.js";
+import { CvEditor }     from "./components/CvEditor.js";
+import { MemberList }   from "./components/MemberList.js";
+import { CvViewer }     from "./components/CvViewer.js";
+import { FileHandler }  from "./utils/FileHandler.js";
+import { MemberService } from "./services/MemberService.js";
 
 const HERO_KEY = "cv-manager-hero";
 const service  = new MemberService();

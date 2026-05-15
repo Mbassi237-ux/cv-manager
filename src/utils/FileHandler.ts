@@ -35,10 +35,10 @@ export class FileHandler {
 
       input.type = "file";
 
-      /* 🔥 IMPORTANT */
+      /*  IMPORTANT */
       input.accept = accept;
 
-      /* 🔥 WINDOWS + AUDIO FIX */
+      /*  WINDOWS + AUDIO FIX */
       if (accept.includes("audio")) {
 
         input.accept = `
@@ -53,7 +53,7 @@ export class FileHandler {
 
       }
 
-      /* 🔥 VIDEO FIX */
+      /*  VIDEO FIX */
       if (accept.includes("video")) {
 
         input.accept = `
@@ -67,7 +67,7 @@ export class FileHandler {
 
       }
 
-      /* 🔥 IMAGE FIX */
+      /*  IMAGE FIX */
       if (accept.includes("image")) {
 
         input.accept = `
@@ -116,7 +116,7 @@ export class FileHandler {
         }
       });
 
-      /* 🔥 Si utilisateur annule */
+      /*  Si utilisateur annule */
       window.addEventListener(
         "focus",
         () => {

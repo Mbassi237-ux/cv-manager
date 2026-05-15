@@ -1,4 +1,4 @@
-import { Validator } from "../src/utils/Validator";
+import { Validator } from "../src/utils/Validator.js";
 
 describe("Validator", () => {
   test("email valide",                () => expect(Validator.isEmail("a@b.com")).toBe(true));

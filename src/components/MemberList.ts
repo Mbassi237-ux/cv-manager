@@ -1,6 +1,6 @@
-import { Member }        from "../models/Member";
-import { MemberService } from "../services/MemberService";
-import { MemberCard }    from "./MemberCard";
+import { Member }        from "../models/Member.js";
+import { MemberService } from "../services/MemberService.js";
+import { MemberCard }    from "./MemberCard.js";
 
 export class MemberList {
   private container = document.createElement("div");
